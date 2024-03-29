@@ -5,4 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E0F6FA"
-    tools:context=".Results" />
+    tools:context=".Results" >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="413dp"
+        android:layout_height="162dp"
+        app:srcCompat="@drawable/captura_de_pantalla_2024_03_29_095858"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="2dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
