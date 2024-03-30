@@ -1,623 +1,730 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="415dp"
-    android:layout_height="2000dp"
-    android:background="#E0F6FA"
-    tools:context=".MainActivity">
-
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="303dp"
-        android:layout_height="130dp"
-        android:gravity="left"
-        android:text="MeNTS Calculator"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.276"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
-
-    <TextView
-        android:id="@+id/Procedure"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
         android:layout_width="415dp"
-        android:layout_height="40dp"
-        android:background="#A3D7CE"
-        android:gravity="center"
-        android:text="Procedure"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.064" />
-
-    <TextView
-        android:id="@+id/pr1"
-        android:layout_width="135dp"
-        android:layout_height="25dp"
-        android:text="OR time (min) : "
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.176" />
+        android:layout_height="match_parent"
+        android:background="#E0F6FA"
+        tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/pr2"
-        android:layout_width="135dp"
-        android:layout_height="25dp"
-        android:text="Estimated LOS : "
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/spinner_pr2"
-        app:layout_constraintHorizontal_bias="0.141"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pr1"
-        app:layout_constraintVertical_bias="0.014" />
-
-    <TextView
-        android:id="@+id/pr3"
-        android:layout_width="135dp"
-        android:layout_height="25dp"
-        android:text="PostOp ICU need : "
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pr1"
-        app:layout_constraintVertical_bias="0.084" />
-
-    <TextView
-        android:id="@+id/pr4"
-        android:layout_width="197dp"
-        android:layout_height="44dp"
-        android:text="Estimated blood loss (prob %) : "
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228" />
-
-    <TextView
-        android:id="@+id/pr5"
-        android:layout_width="205dp"
-        android:layout_height="25dp"
-        android:text="Surgical team size: "
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.283" />
-
-    <TextView
-        android:id="@+id/pr6"
-        android:layout_width="224dp"
-        android:layout_height="49dp"
-        android:text="Intubation needed to perform procedure (prob %) : "
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.311" />
-
-    <TextView
-        android:id="@+id/pr7"
-        android:layout_width="154dp"
-        android:layout_height="31dp"
-        android:text="Surgical site :"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.342" />
-
-    <TextView
-        android:id="@+id/Disease"
-        android:layout_width="415dp"
-        android:layout_height="40dp"
-        android:background="#A3D7CE"
-        android:gravity="center"
-        android:text="Disease"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.315" />
-
-    <TextView
-        android:id="@+id/d4"
-        android:layout_width="224dp"
-        android:layout_height="49dp"
-        android:text="Impact of 2 wk delay in surgical difficulty/risk:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.528" />
-
-    <TextView
-        android:id="@+id/d6"
-        android:layout_width="224dp"
-        android:layout_height="49dp"
-        android:text="Impact of 6 wk delay in surgical difficulty/risk:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.606" />
-
-    <TextView
-        android:id="@+id/d1"
-        android:layout_width="224dp"
-        android:layout_height="49dp"
-        android:text="Non-operative treatment option effectiviness:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.411" />
-
-    <TextView
-        android:id="@+id/d3"
-        android:layout_width="224dp"
-        android:layout_height="49dp"
-        android:text="Impact of 2 wk delay in disease outcome:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.49" />
-
-    <TextView
-        android:id="@+id/d2"
-        android:layout_width="224dp"
-        android:layout_height="60dp"
-        android:text="Non-operative treatment option resource use / exposure risk:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
-
-    <TextView
-        android:id="@+id/d5"
-        android:layout_width="224dp"
-        android:layout_height="49dp"
-        android:text="Impact of 6 wk delay in disease outcome:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.566" />
-
-    <TextView
-        android:id="@+id/Patient"
-        android:layout_width="415dp"
-        android:layout_height="40dp"
-        android:background="#A3D7CE"
-        android:gravity="center"
-        android:text="Patient"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.611" />
-
-    <TextView
-        android:id="@+id/pac1"
-        android:layout_width="154dp"
-        android:layout_height="31dp"
-        android:text="Age:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.678" />
-
-    <TextView
-        android:id="@+id/pac3"
-        android:layout_width="224dp"
-        android:layout_height="31dp"
-        android:text="Obstructive sleep apnea:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.745" />
-
-    <TextView
-        android:id="@+id/pac4"
-        android:layout_width="224dp"
-        android:layout_height="31dp"
-        android:text="CV disease (HTN, CHF, CAD):"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.772" />
-
-    <TextView
-        android:id="@+id/pac8"
-        android:layout_width="224dp"
-        android:layout_height="55dp"
-        android:text="Exposure to known COVID-19 + person in past 14 days:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.909" />
-
-    <TextView
-        android:id="@+id/pac5"
-        android:layout_width="224dp"
-        android:layout_height="31dp"
-        android:text="Diabetes:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="303dp"
+            android:layout_height="130dp"
+            android:gravity="left"
+            android:text="MeNTS Calculator"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/pr1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.312"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.081" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="413dp"
+            android:layout_height="162dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/Procedure"
+            app:srcCompat="@drawable/captura_de_pantalla_2024_03_29_095858" />
 
 
-    <TextView
-        android:id="@+id/pac7"
-        android:layout_width="224dp"
-        android:layout_height="55dp"
-        android:text="ILI symptoms  (fever, cough, sore throat, body aches, diarrhea):"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.868" />
+        <TextView
+            android:id="@+id/Procedure"
+            android:layout_width="415dp"
+            android:layout_height="40dp"
+            android:background="#A3D7CE"
+            android:gravity="center"
+            android:text="Procedure"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/pr1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/pac6"
-        android:layout_width="224dp"
-        android:layout_height="31dp"
-        android:text="Immunocompromised:"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.829" />
+        <TextView
+            android:id="@+id/pr1"
+            android:layout_width="135dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="196dp"
+            android:layout_marginBottom="31dp"
+            android:text="OR time (min) : "
 
-    <TextView
-        android:id="@+id/pac2"
-        android:layout_width="224dp"
-        android:layout_height="49dp"
-        android:text="Lung Disease (asthma, COPD, CF):"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.073"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.713" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/pr2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.067"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
-    <Spinner
-        android:id="@+id/spinner_pr1"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.175" />
+        <Spinner
+            android:id="@+id/spinner_pr2"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="252dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="39dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_pr3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner_pr2"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
+        <Spinner
+            android:id="@+id/spinner_pr6"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="508dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="63dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_pr7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner_pr3"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.23" />
+        <Spinner
+            android:id="@+id/spinner_pr3"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="316dp"
 
-    <Spinner
-        android:id="@+id/spinner_pr4"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.256" />
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="43dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_pr4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner_pr5"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.283" />
+        <Spinner
+            android:id="@+id/spinner_pr7"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="596dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="46dp"
+            app:layout_constraintBottom_toTopOf="@+id/Disease"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.937"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner_pr6"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.314" />
+        <Spinner
+            android:id="@+id/spinner_pr4"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="384dp"
 
-    <Spinner
-        android:id="@+id/spinner_pr7"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.341" />
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_pr5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner_d1"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.406" />
+        <Spinner
+            android:id="@+id/spinner_pr1"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="21dp"
 
-    <Spinner
-        android:id="@+id/spinner_d2"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.45" />
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="31dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_pr2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Procedure" />
 
-    <Spinner
-        android:id="@+id/spinner_d3"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.49" />
+        <Spinner
+            android:id="@+id/spinner_pr5"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="444dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="39dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_pr6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner_d4"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.527" />
+        <TextView
+            android:id="@+id/pr5"
+            android:layout_width="205dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="444dp"
+            android:layout_marginBottom="39dp"
+            android:text="Surgical team size: "
 
-    <Spinner
-        android:id="@+id/spinner_d5"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.566" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/pr6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner_d6"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.675" />
+        <TextView
+            android:id="@+id/pr6"
+            android:layout_width="224dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="508dp"
+            android:layout_marginBottom="35dp"
+            android:text="Intubation needed to perform procedure (prob %) : "
 
-    <Spinner
-        android:id="@+id/spinner_p1"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.603" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/pr7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.099"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner_p2"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.711" />
+        <TextView
+            android:id="@+id/pr4"
+            android:layout_width="197dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="308dp"
+            android:layout_marginBottom="32dp"
+            android:text="Estimated blood loss (prob %) : "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/pr3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner_p3"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.742" />
+        <TextView
+            android:id="@+id/pr7"
+            android:layout_width="154dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="588dp"
+            android:layout_marginBottom="133dp"
+            android:text="Surgical site :"
 
-    <Spinner
-        android:id="@+id/spinner_p4"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.769" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_d1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner_p5"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.797" />
+        <TextView
+            android:id="@+id/pr3"
+            android:layout_width="135dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="384dp"
+            android:layout_marginBottom="35dp"
+            android:text="PostOp ICU need : "
 
-    <Spinner
-        android:id="@+id/spinner_p6"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.826" />
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/pr5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.067"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinner_p7"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.862" />
+        <TextView
+            android:id="@+id/pr2"
+            android:layout_width="135dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="31dp"
+            android:text="Estimated LOS : "
+            android:textSize="16sp"
 
-    <Spinner
-        android:id="@+id/spinner_p8"
-        android:layout_width="141dp"
-        android:layout_height="25dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.895" />
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/pr4"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintEnd_toStartOf="@+id/spinner_pr2"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/Disease"
+            android:layout_width="415dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="488dp"
+            android:layout_marginBottom="37dp"
+            android:background="#A3D7CE"
+            android:gravity="center"
+            android:text="Disease"
+
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/d1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Procedure" />
+
+        <TextView
+            android:id="@+id/d1"
+            android:layout_width="224dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="740dp"
+            android:layout_marginBottom="19dp"
+            android:text="Non-operative treatment option effectiviness:"
+
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/d2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/Patient"
+            android:layout_width="415dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="1072dp"
+            android:layout_marginBottom="29dp"
+            android:background="#A3D7CE"
+            android:gravity="center"
+            android:text="Patient"
+
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_d6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/pac1"
+            android:layout_width="154dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="1276dp"
+            android:layout_marginBottom="25dp"
+            android:text="Age:"
+
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/pac2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.038"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pac3"
+            android:layout_width="224dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="1400dp"
+            android:layout_marginBottom="25dp"
+            android:text="Obstructive sleep apnea:"
+
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/pac4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pac4"
+            android:layout_width="224dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="1456dp"
+            android:layout_marginBottom="21dp"
+            android:text="CV disease (HTN, CHF, CAD):"
+
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/pac5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pac8"
+            android:layout_width="224dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="1696dp"
+            android:text="Exposure to known COVID-19 + person in past 14 days:"
+            android:textSize="16sp"
+
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/buttonMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pac5"
+            android:layout_width="224dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="1508dp"
+            android:layout_marginBottom="25dp"
+            android:text="Diabetes:"
+
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/pac6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pac7"
+            android:layout_width="224dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="1620dp"
+            android:layout_marginBottom="21dp"
+            android:text="ILI symptoms  (fever, cough, sore throat, body aches, diarrhea):"
+
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/pac8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pac6"
+            android:layout_width="224dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="1564dp"
+            android:layout_marginBottom="25dp"
+            android:text="Immunocompromised:"
+
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/pac7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pac2"
+            android:layout_width="224dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="1332dp"
+            android:layout_marginBottom="19dp"
+            android:text="Lung Disease (asthma, COPD, CF):"
+
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/pac3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_d1"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="752dp"
+
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="51dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_d2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.974"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_d2"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="828dp"
+
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="51dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_d3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.974"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_d3"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="904dp"
+
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.974"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_d4"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="972dp"
+
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="55dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_d5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.974"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_d5"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="1052dp"
+
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="43dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_p1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.974"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_d6"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="1276dp"
+
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="43dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_p2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.974"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_p6"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="1576dp"
+
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_p7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.974"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_p2"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="1344dp"
+
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="31dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_p3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.985"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_p4"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="1460dp"
+
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="27dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_p5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.974"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_p7"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="1636dp"
+
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="47dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_p8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.974"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_p3"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="1400dp"
+
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_p4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.974"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_p5"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="1512dp"
+
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="39dp"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_p6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.974"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner_p8"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="1704dp"
+
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.974"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Spinner
+            android:id="@+id/spinner_p1"
+            android:layout_width="141dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="1120dp"
+
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="62dp"
+            app:layout_constraintBottom_toTopOf="@+id/Patient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.974"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/d2"
+            android:layout_width="224dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="808dp"
+            android:layout_marginBottom="24dp"
+            android:text="Non-operative treatment option resource use / exposure risk:"
+
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/d3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/d4"
+            android:layout_width="224dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="960dp"
+            android:layout_marginBottom="27dp"
+            android:text="Impact of 2 wk delay in surgical difficulty/risk:"
+
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/d5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/d3"
+            android:layout_width="224dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="892dp"
+            android:layout_marginBottom="19dp"
+            android:text="Impact of 2 wk delay in disease outcome:"
+
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/d4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/d5"
+            android:layout_width="224dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="1036dp"
+            android:layout_marginBottom="23dp"
+            android:text="Impact of 6 wk delay in disease outcome:"
+
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/d6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/d6"
+            android:layout_width="224dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="1108dp"
+            android:layout_marginBottom="50dp"
+            android:text="Impact of 6 wk delay in surgical difficulty/risk:"
+
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/Patient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="11dp"
+            android:backgroundTint="#A66D9DC5"
+            android:text="Calcular"
+            app:iconTint="#00838F"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pac8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
