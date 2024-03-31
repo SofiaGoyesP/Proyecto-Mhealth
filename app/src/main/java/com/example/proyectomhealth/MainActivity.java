@@ -9,9 +9,6 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -452,7 +449,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String[] lista_p6 = {"No", " - ", "-","Moderate","severe"};
+        String[] lista_p6 = {"No", " - ", "-","Moderate","Severe"};
         ArrayAdapter<String> adapter_p6 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lista_p6);
         adapter_p6.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
         spinner_p6.setAdapter(adapter_p6);
@@ -508,14 +505,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     private void SumaTotal() {
 
-        int suma = valor_pr1+valor_pr2+valor_pr3+valor_pr4+valor_pr5+valor_pr6+valor_pr7+valor_d1+valor_d2+valor_d3+valor_d4+valor_d5+valor_d6+valor_p1+valor_p2+valor_p3+valor_p4+valor_p5+valor_p6+valor_p7+valor_p8;
-        Total = String.valueOf(suma);
+        int suma_pr=valor_pr1+valor_pr2+valor_pr3+valor_pr4+valor_pr5+valor_pr6+valor_pr7;
+        int suma_d=valor_d1+valor_d2+valor_d3+valor_d4+valor_d5+valor_d6;
+        int suma_p = valor_p1+valor_p2+valor_p3+valor_p4+valor_p5+valor_p6+valor_p7+valor_p8;
+        int Total_int= suma_pr+suma_d+suma_p;
+        Total = String.valueOf(Total_int);
         TextView SumaTotal = findViewById(R.id.textView_prueba);
         SumaTotal.setText(Total);
 
     }
-
 }
