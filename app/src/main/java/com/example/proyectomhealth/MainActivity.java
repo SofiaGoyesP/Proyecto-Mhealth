@@ -15,14 +15,37 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    //private int pr1=0;
+    //Variables globales para procedimiento
     private int valor_pr1=0;
     private int valor_pr2=0;
-    private String Total = "";
+    private int valor_pr3=0;
+    private int valor_pr4=0;
+    private int valor_pr5=0;
+    private int valor_pr6=0;
+    private int valor_pr7=0;
 
-    //private int RESULTADO=0;
-    //private int RESULT
-    //private TextView textresult=findViewById(R.id.textresultado);
+    //Variables globales para enfermedad
+    private int valor_d1=0;
+    private int valor_d2=0;
+    private int valor_d3=0;
+    private int valor_d4=0;
+    private int valor_d5=0;
+    private int valor_d6=0;
+
+
+    //Variables globales para paciente
+    private int valor_p1=0;
+    private int valor_p2=0;
+    private int valor_p3=0;
+    private int valor_p4=0;
+    private int valor_p5=0;
+    private int valor_p6=0;
+    private int valor_p7=0;
+    private int valor_p8=0;
+
+    // Variable global para el total de la suma
+
+    private String Total = "";
 
     @Override
     protected void onCreate(Bundle savedIntanceState){
@@ -45,9 +68,6 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_pr1, View view, int position, long id) {
                 String item_pr1 = adapterView_pr1.getItemAtPosition(position).toString();
                 valor_pr1= valores[position];
-                //RESULTADO=valorselecionado;
-                //String val_pr1=String.valueOf(valor_pr1);
-                // textresult.setText(Rvalor);
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -71,9 +91,7 @@ public class MainActivity extends AppCompatActivity {
                 // Tipos del item
                 String item_pr2 = adapterView_pr2.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
                 valor_pr2= valores[position];
-                //RESULTADO+=valorselec2;
-                //String Rvalor2=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalor2);
+
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -94,10 +112,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_pr3, View view, int position, long id) {
                 // Tipos del item
                 String item_pr3 = adapterView_pr3.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselec3= valores[position];
-                //RESULTADO+=valorselec3;
-                //String Rvalor3=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalor3);
+                valor_pr3= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -117,10 +132,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_pr4, View view, int position, long id) {
                 // Tipos del item
                 String item_pr4 = adapterView_pr4.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselec4= valores[position];
-                //RESULTADO+=valorselec4;
-                //String Rvalor4=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalor4);
+                valor_pr4= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -141,10 +153,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_pr5, View view, int position, long id) {
                 // Tipos del item
                 String item_pr5 = adapterView_pr5.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselec5= valores[position];
-                //RESULTADO+=valorselec5;
-                //String Rvalor5=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalor5);
+                valor_pr5= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -165,10 +174,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_pr6, View view, int position, long id) {
                 // Tipos del item
                 String item_pr6 = adapterView_pr6.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselec6= valores[position];
-                //RESULTADO+=valorselec6;
-                //String Rvalor6=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalor6);
+                valor_pr6= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -188,10 +194,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_pr7, View view, int position, long id) {
                 // Tipos del item
                 String item_pr7 = adapterView_pr7.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselec7= valores[position];
-                //RESULTADO+=valorselec7;
-                //String Rvalor7=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalor7);
+                valor_pr7= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -212,10 +215,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_d1, View view, int position, long id) {
                 // Tipos del item
                 String item_d1 = adapterView_d1.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselecd1= valores[position];
-                //RESULTADO+=valorselecd1;
-                //String Rvalord1=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalord1);
+                valor_d1= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -236,10 +236,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_d2, View view, int position, long id) {
                 // Tipos del item
                 String item_d2 = adapterView_d2.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselecd2= valores[position];
-                //RESULTADO+=valorselecd2;
-                //String Rvalord2=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalord2);
+                valor_d2= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -260,10 +257,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_d3, View view, int position, long id) {
                 // Tipos del item
                 String item_d3 = adapterView_d3.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselecd3= valores[position];
-                //RESULTADO+=valorselecd3;
-                //String Rvalord3=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalord3);
+                valor_d3= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -283,10 +277,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_d4, View view, int position, long id) {
                 // Tipos del item
                 String item_d4 = adapterView_d4.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselecd4= valores[position];
-                //RESULTADO+=valorselecd4;
-                //String Rvalord4=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalord4);
+                valor_d4= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -307,10 +298,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_d5, View view, int position, long id) {
                 // Tipos del item
                 String item_d5 = adapterView_d5.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselecd5= valores[position];
-                //RESULTADO+=valorselecd5;
-                //String Rvalord5=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalord5);
+                valor_d5= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -326,15 +314,12 @@ public class MainActivity extends AppCompatActivity {
         //-------------------------------------------
         Spinner spinner_d6 = findViewById(R.id.spinner_d6);
 
-        spinner_d5.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinner_d6.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView_d6, View view, int position, long id) {
                 // Tipos del item
                 String item_d6 = adapterView_d6.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselecd6= valores[position];
-                //RESULTADO+=valorselecd6;
-                //String Rvalord6=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalord6);
+                valor_d6= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -355,10 +340,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_p1, View view, int position, long id) {
                 // Tipos del item
                 String item_p1 = adapterView_p1.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselecp1= valores[position];
-                //RESULTADO+=valorselecp1;
-                //String Rvalorp1=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalorp1);
+                valor_p1= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -379,10 +361,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_p2, View view, int position, long id) {
                 // Tipos del item
                 String item_p2 = adapterView_p2.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselecp2= valores[position];
-                //RESULTADO+=valorselecp2;
-                //String Rvalorp2=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalorp2);
+                valor_p2= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -403,10 +382,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_p3, View view, int position, long id) {
                 // Tipos del item
                 String item_p3 = adapterView_p3.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselecp3= valores[position];
-                //RESULTADO+=valorselecp3;
-                //String Rvalorp3=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalorp3);
+                valor_p3= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -427,10 +403,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_p4, View view, int position, long id) {
                 // Tipos del item
                 String item_p4 = adapterView_p4.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselecp4= valores[position];
-                //RESULTADO+=valorselecp4;
-                //String Rvalorp4=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalorp4);
+                valor_p4= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -451,10 +424,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_p5, View view, int position, long id) {
                 // Tipos del item
                 String item_p5 = adapterView_p5.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselecp5= valores[position];
-                //RESULTADO+=valorselecp5;
-                //String Rvalorp5=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalorp5);
+                valor_p5= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -475,10 +445,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_p6, View view, int position, long id) {
                 // Tipos del item
                 String item_p6 = adapterView_p6.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselecp6= valores[position];
-                //RESULTADO+=valorselecp6;
-                //String Rvalorp6=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalorp6);
+                valor_p6= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -499,10 +466,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_p7, View view, int position, long id) {
                 // Tipos del item
                 String item_p7 = adapterView_p7.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselecp7= valores[position];
-                //RESULTADO+=valorselecp7;
-                //String Rvalorp7=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalorp7);
+                valor_p7= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -523,10 +487,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView_p8, View view, int position, long id) {
                 // Tipos del item
                 String item_p8 = adapterView_p8.getItemAtPosition(position).toString(); // Se debe pasar a string porque arriba estoy diciento que es un int
-                int valorselecp8= valores[position];
-                //RESULTADO+=valorselecp8;
-                //String Rvalorp8=String.valueOf(RESULTADO);
-                //textresult.setText(Rvalorp8);
+                valor_p8= valores[position];
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
@@ -550,7 +511,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void SumaTotal() {
 
-        int suma = valor_pr1+valor_pr2;
+        int suma = valor_pr1+valor_pr2+valor_pr3+valor_pr4+valor_pr5+valor_pr6+valor_pr7+valor_d1+valor_d2+valor_d3+valor_d4+valor_d5+valor_d6+valor_p1+valor_p2+valor_p3+valor_p4+valor_p5+valor_p6+valor_p7+valor_p8;
         Total = String.valueOf(suma);
         TextView SumaTotal = findViewById(R.id.textView_prueba);
         SumaTotal.setText(Total);
