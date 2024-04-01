@@ -365,14 +365,14 @@
             android:id="@+id/pac8"
             android:layout_width="224dp"
             android:layout_height="55dp"
-            android:layout_marginTop="1550dp"
+            android:layout_marginTop="1750dp"
             android:text="Exposure to known COVID-19 + person in past 14 days:"
             android:textSize="16sp"
 
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/buttonMain"
+            app:layout_constraintBottom_toTopOf="@+id/Upperthreshold"
             app:layout_constraintEnd_toStartOf="@+id/spinner_p8"
-            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintHorizontal_bias="0.294"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -612,8 +612,8 @@
             android:id="@+id/spinner_p8"
             android:layout_width="141dp"
             android:layout_height="25dp"
-            android:layout_marginTop="1250dp"
 
+            android:layout_marginTop="1250dp"
             android:layout_marginEnd="4dp"
             app:layout_constraintBottom_toTopOf="@+id/buttonMain"
             app:layout_constraintEnd_toEndOf="parent"
@@ -737,6 +737,7 @@
             android:id="@+id/textView_prueba"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
             android:text="Resultado"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -745,9 +746,9 @@
 
         <TextView
             android:id="@+id/Upperthreshold"
-            android:layout_width="209dp"
-            android:layout_height="31dp"
-            android:layout_marginTop="40dp"
+            android:layout_width="219dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="41dp"
             android:layout_marginBottom="30dp"
             android:background="#DFF5F9"
             android:text="Insert Upper threshold value:"
@@ -772,7 +773,7 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/buttonMain"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.111"
+            app:layout_constraintHorizontal_bias="0.095"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Upperthreshold"
             app:layout_constraintVertical_bias="1.0" />
@@ -782,7 +783,7 @@
             android:layout_width="62dp"
             android:layout_height="40dp"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="41dp"
             android:layout_marginBottom="15dp"
             android:ems="10"
             android:inputType="number"
