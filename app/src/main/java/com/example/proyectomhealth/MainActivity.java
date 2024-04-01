@@ -1,9 +1,11 @@
 package com.example.proyectomhealth;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -501,6 +503,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 SumaTotal();
+                irAResults();
 
             }
         });
@@ -515,5 +518,20 @@ public class MainActivity extends AppCompatActivity {
         TextView SumaTotal = findViewById(R.id.textView_prueba);
         SumaTotal.setText(Total);
 
+    }
+    public void irAResults() {
+        // Obtén el valor del EditText
+        EditText UpperTextNumber = findViewById(R.id.UpperTextNumber);
+        String Upnumero = UpperTextNumber.getText().toString();
+        EditText LowerTextNumber = findViewById(R.id.LowerTextNumber);
+        String Lnumero = LowerTextNumber.getText().toString();
+
+        // Crea un Intent para iniciar la Activity2
+        Intent intent = new Intent(this, Results.class);
+        // Agrega el valor del número como extra al Intent
+        intent.putExtra("numero_extraUp", Upnumero);
+        intent.putExtra("numero_extraL", Lnumero);
+        // Inicia Results
+        startActivity(intent);
     }
 }

@@ -46,7 +46,7 @@
             android:layout_height="40dp"
             android:background="#A3D7CE"
             android:gravity="center"
-            android:text="Procedure"
+            android:text="P r o c e d u r e"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/pr1"
@@ -268,7 +268,7 @@
             android:layout_marginBottom="37dp"
             android:background="#A3D7CE"
             android:gravity="center"
-            android:text="Disease"
+            android:text="D i s e a s e"
 
             android:textSize="20sp"
             android:textStyle="bold"
@@ -303,11 +303,11 @@
             android:layout_marginBottom="29dp"
             android:background="#A3D7CE"
             android:gravity="center"
-            android:text="Patient"
+            android:text="P a t i e n t"
 
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/spinner_p1"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_d6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -503,14 +503,14 @@
 
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="43dp"
-            app:layout_constraintBottom_toTopOf="@+id/spinner_d6"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_p1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.974"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Spinner
-            android:id="@+id/spinner_p1"
+            android:id="@+id/spinner_d6"
             android:layout_width="141dp"
             android:layout_height="25dp"
             android:layout_marginTop="1276dp"
@@ -623,7 +623,7 @@
             app:layout_constraintVertical_bias="0.7" />
 
         <Spinner
-            android:id="@+id/spinner_d6"
+            android:id="@+id/spinner_p1"
             android:layout_width="141dp"
             android:layout_height="25dp"
             android:layout_marginTop="1120dp"
@@ -634,8 +634,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.974"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/d2"
@@ -724,6 +723,7 @@
             android:layout_marginTop="11dp"
             android:layout_marginBottom="11dp"
             android:backgroundTint="#A3D7CE"
+            android:onClick="irAResults"
             android:text="Calcular"
             android:textColor="#040303"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -740,10 +740,8 @@
             android:text="Resultado"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.425"
             app:layout_constraintStart_toEndOf="@+id/buttonMain"
-            app:layout_constraintTop_toBottomOf="@+id/spinner_p8"
-            app:layout_constraintVertical_bias="0.51" />
+            app:layout_constraintTop_toBottomOf="@+id/spinner_p8" />
 
         <TextView
             android:id="@+id/Upperthreshold"
