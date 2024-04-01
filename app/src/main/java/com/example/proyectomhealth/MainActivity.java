@@ -522,8 +522,6 @@ public class MainActivity extends AppCompatActivity {
         strSuma_pr= String.valueOf(suma_pr);
         strSuma_p= String.valueOf(suma_p);
         strSuma_d= String.valueOf(suma_d);
-        TextView SumaTotal = findViewById(R.id.textView_prueba);
-        SumaTotal.setText(Total);
 
     }
     public void irAResults() {

@@ -44,14 +44,14 @@ public class Results extends AppCompatActivity {
         findViewById(R.id.buttonMain).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToNextView();
+                goToMain();
 
             }
         });
     }
 
 
-    private void goToNextView(){
+    private void goToMain(){
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
     }
