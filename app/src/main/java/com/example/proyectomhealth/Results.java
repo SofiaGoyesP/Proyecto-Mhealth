@@ -22,5 +22,21 @@ public class Results extends AppCompatActivity {
         TextView umbral_bajo = findViewById(R.id.umbral_bajo);
         // Establece el valor del número en el TextView
         umbral_bajo.setText(Lnumero);
+
+        String suma = getIntent().getStringExtra("SumaTotal");
+        TextView TotalMents = findViewById(R.id.TotalMeNTSScore);
+        TotalMents.setText(suma);
+
+        String suma_pr = getIntent().getStringExtra("pr");
+        TextView Totalpr = findViewById(R.id.ProcedureScore);
+        Totalpr.setText(suma_pr);
+
+        String suma_p = getIntent().getStringExtra("p");
+        TextView Totalp = findViewById(R.id.PatientScore);
+        Totalp.setText(suma_p);
+
+        String suma_d = getIntent().getStringExtra("d");
+        TextView Totalpd = findViewById(R.id.DiseaseScore);
+        Totalpd.setText(suma_d);
     }
 }

@@ -370,7 +370,7 @@
             android:textSize="16sp"
 
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/Upperthreshold"
+            app:layout_constraintBottom_toTopOf="@+id/Lowerthreshold"
             app:layout_constraintEnd_toStartOf="@+id/spinner_p8"
             app:layout_constraintHorizontal_bias="0.294"
             app:layout_constraintStart_toStartOf="parent"
@@ -745,16 +745,16 @@
             app:layout_constraintTop_toBottomOf="@+id/spinner_p8" />
 
         <TextView
-            android:id="@+id/Upperthreshold"
+            android:id="@+id/Lowerthreshold"
             android:layout_width="219dp"
             android:layout_height="30dp"
             android:layout_marginTop="41dp"
             android:layout_marginBottom="30dp"
             android:background="#DFF5F9"
-            android:text="Insert Upper threshold value:"
+            android:text="Insert Lower threshold value:"
             android:textSize="16sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/Lowerthreshold"
+            app:layout_constraintBottom_toTopOf="@+id/Upperthreshold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.111"
             app:layout_constraintStart_toStartOf="parent"
@@ -762,24 +762,24 @@
             app:layout_constraintVertical_bias="1.0" />
 
         <TextView
-            android:id="@+id/Lowerthreshold"
+            android:id="@+id/Upperthreshold"
             android:layout_width="217dp"
             android:layout_height="28dp"
             android:layout_marginTop="40dp"
             android:layout_marginBottom="30dp"
             android:background="#DFF5F9"
-            android:text="Insert Lower threshold value:"
+            android:text="Insert Upper threshold value:"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/buttonMain"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.095"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Upperthreshold"
+            app:layout_constraintTop_toBottomOf="@+id/Lowerthreshold"
             app:layout_constraintVertical_bias="1.0" />
 
         <EditText
-            android:id="@+id/UpperTextNumber"
+            android:id="@+id/LowerTextNumber"
             android:layout_width="62dp"
             android:layout_height="40dp"
             android:layout_marginStart="50dp"
@@ -787,15 +787,15 @@
             android:layout_marginBottom="15dp"
             android:ems="10"
             android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/LowerTextNumber"
+            app:layout_constraintBottom_toTopOf="@+id/UpperTextNumber"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/Upperthreshold"
+            app:layout_constraintStart_toEndOf="@+id/Lowerthreshold"
             app:layout_constraintTop_toBottomOf="@+id/spinner_p8"
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/LowerTextNumber"
+            android:id="@+id/UpperTextNumber"
             android:layout_width="62dp"
             android:layout_height="40dp"
             android:layout_marginStart="50dp"
@@ -806,8 +806,8 @@
             app:layout_constraintBottom_toTopOf="@+id/buttonMain"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/Upperthreshold"
-            app:layout_constraintTop_toBottomOf="@+id/UpperTextNumber"
+            app:layout_constraintStart_toEndOf="@+id/Lowerthreshold"
+            app:layout_constraintTop_toBottomOf="@+id/LowerTextNumber"
             app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

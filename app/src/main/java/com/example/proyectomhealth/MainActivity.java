@@ -45,6 +45,10 @@ public class MainActivity extends AppCompatActivity {
     // Variable global para el total de la suma
 
     private String Total = "";
+    private String strSuma_pr="";
+    private String strSuma_p="";
+    private String strSuma_d="";
+
 
     @Override
     protected void onCreate(Bundle savedIntanceState){
@@ -515,6 +519,9 @@ public class MainActivity extends AppCompatActivity {
         int suma_p = valor_p1+valor_p2+valor_p3+valor_p4+valor_p5+valor_p6+valor_p7+valor_p8;
         int Total_int= suma_pr+suma_d+suma_p;
         Total = String.valueOf(Total_int);
+        strSuma_pr= String.valueOf(suma_pr);
+        strSuma_p= String.valueOf(suma_p);
+        strSuma_d= String.valueOf(suma_d);
         TextView SumaTotal = findViewById(R.id.textView_prueba);
         SumaTotal.setText(Total);
 
@@ -526,11 +533,17 @@ public class MainActivity extends AppCompatActivity {
         EditText LowerTextNumber = findViewById(R.id.LowerTextNumber);
         String Lnumero = LowerTextNumber.getText().toString();
 
+
         // Crea un Intent para iniciar la Activity2
         Intent intent = new Intent(this, Results.class);
         // Agrega el valor del número como extra al Intent
         intent.putExtra("numero_extraUp", Upnumero);
         intent.putExtra("numero_extraL", Lnumero);
+        intent.putExtra("SumaTotal", Total);
+        intent.putExtra("pr", strSuma_pr);
+        intent.putExtra("p", strSuma_p);
+        intent.putExtra("d", strSuma_d);
+
         // Inicia Results
         startActivity(intent);
     }
