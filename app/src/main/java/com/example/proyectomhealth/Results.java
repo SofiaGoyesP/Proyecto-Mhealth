@@ -2,7 +2,9 @@ package com.example.proyectomhealth;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class Results extends AppCompatActivity {
@@ -38,5 +40,19 @@ public class Results extends AppCompatActivity {
         String suma_d = getIntent().getStringExtra("d");
         TextView Totalpd = findViewById(R.id.DiseaseScore);
         Totalpd.setText(suma_d);
+
+        findViewById(R.id.buttonMain).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToNextView();
+
+            }
+        });
+    }
+
+
+    private void goToNextView(){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
     }
 }
