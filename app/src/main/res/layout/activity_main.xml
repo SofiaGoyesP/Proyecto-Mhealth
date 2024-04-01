@@ -365,14 +365,14 @@
             android:id="@+id/pac8"
             android:layout_width="224dp"
             android:layout_height="55dp"
-            android:layout_marginTop="1696dp"
+            android:layout_marginTop="1550dp"
             android:text="Exposure to known COVID-19 + person in past 14 days:"
             android:textSize="16sp"
 
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/buttonMain"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintEnd_toStartOf="@+id/spinner_p8"
+            app:layout_constraintHorizontal_bias="0.47"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -403,10 +403,11 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/pac8"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintEnd_toStartOf="@+id/spinner_p7"
+            app:layout_constraintHorizontal_bias="0.256"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.507" />
 
         <TextView
             android:id="@+id/pac6"
@@ -611,15 +612,15 @@
             android:id="@+id/spinner_p8"
             android:layout_width="141dp"
             android:layout_height="25dp"
-            android:layout_marginTop="1704dp"
+            android:layout_marginTop="1250dp"
 
             android:layout_marginEnd="4dp"
             app:layout_constraintBottom_toTopOf="@+id/buttonMain"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.974"
+            app:layout_constraintHorizontal_bias="0.955"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.7" />
 
         <Spinner
             android:id="@+id/spinner_d6"
@@ -727,8 +728,10 @@
             android:textColor="#040303"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.522"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pac8" />
+            app:layout_constraintTop_toBottomOf="@+id/pac8"
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/textView_prueba"
@@ -741,6 +744,72 @@
             app:layout_constraintStart_toEndOf="@+id/buttonMain"
             app:layout_constraintTop_toBottomOf="@+id/spinner_p8"
             app:layout_constraintVertical_bias="0.51" />
+
+        <TextView
+            android:id="@+id/Upperthreshold"
+            android:layout_width="209dp"
+            android:layout_height="31dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+            android:background="#DFF5F9"
+            android:text="Insert Upper threshold value:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/Lowerthreshold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.111"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pac8"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/Lowerthreshold"
+            android:layout_width="217dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+            android:background="#DFF5F9"
+            android:text="Insert Lower threshold value:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/buttonMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.111"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Upperthreshold"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <EditText
+            android:id="@+id/UpperTextNumber"
+            android:layout_width="62dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="15dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/LowerTextNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/Upperthreshold"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_p8"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/LowerTextNumber"
+            android:layout_width="62dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="15dp"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/buttonMain"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/Upperthreshold"
+            app:layout_constraintTop_toBottomOf="@+id/UpperTextNumber"
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
