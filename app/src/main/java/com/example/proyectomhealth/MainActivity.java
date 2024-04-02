@@ -537,39 +537,35 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     private void SumaTotal() {
-        int suma_pr = valor_pr1 + valor_pr2 + valor_pr3 + valor_pr4 + valor_pr5 + valor_pr6 + valor_pr7;
-        int suma_d = valor_d1 + valor_d2 + valor_d3 + valor_d4 + valor_d5 + valor_d6;
-        int suma_p = valor_p1 + valor_p2 + valor_p3 + valor_p4 + valor_p5 + valor_p6 + valor_p7 + valor_p8;
-        int Total_int = suma_pr + suma_d + suma_p;
+
+        int suma_pr=valor_pr1+valor_pr2+valor_pr3+valor_pr4+valor_pr5+valor_pr6+valor_pr7;
+        int suma_d=valor_d1+valor_d2+valor_d3+valor_d4+valor_d5+valor_d6;
+        int suma_p = valor_p1+valor_p2+valor_p3+valor_p4+valor_p5+valor_p6+valor_p7+valor_p8;
+        int Total_int= suma_pr+suma_d+suma_p;
         Total = String.valueOf(Total_int);
-        TextView SumaTotal = findViewById(R.id.textView_prueba);
-        SumaTotal.setText(Total);
-
-        // Llamar a la función para iniciar la actividad Results
-        irAResults();
+        strSuma_pr= String.valueOf(suma_pr);
+        strSuma_p= String.valueOf(suma_p);
+        strSuma_d= String.valueOf(suma_d);
     }
-
     public void irAResults() {
         // Obtén el valor del EditText
         EditText UpperTextNumber = findViewById(R.id.UpperTextNumber);
         String Upnumero = UpperTextNumber.getText().toString();
         EditText LowerTextNumber = findViewById(R.id.LowerTextNumber);
         String Lnumero = LowerTextNumber.getText().toString();
-        String sumapr= String.valueOf(suma_pr);
-        String sumad= String.valueOf(suma_d);
-        String sumap= String.valueOf(suma_p);
-        String totalint= String.valueOf(Total_int);
+
+
         // Crea un Intent para iniciar la Activity2
         Intent intent = new Intent(this, Results.class);
         // Agrega el valor del número como extra al Intent
-        intent.putExtra("suma_pr", sumapr);
-        intent.putExtra("suma_d", sumad);
-        intent.putExtra("suma_p", sumap);
-        intent.putExtra("Total_int", totalint);
         intent.putExtra("numero_extraUp", Upnumero);
         intent.putExtra("numero_extraL", Lnumero);
+        intent.putExtra("SumaTotal", Total);
+        intent.putExtra("pr", strSuma_pr);
+        intent.putExtra("p", strSuma_p);
+        intent.putExtra("d", strSuma_d);
+
         // Inicia Results
         startActivity(intent);
     }

@@ -13,7 +13,6 @@ public class Results extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
-
         // Obtén el valor del extra del Intent
         String Upnumero = getIntent().getStringExtra("numero_extraUp");
         // Obtén el TextView en la Activity2
@@ -50,6 +49,7 @@ public class Results extends AppCompatActivity {
             }
         });
     }
+
 
     private void goToMain(){
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
