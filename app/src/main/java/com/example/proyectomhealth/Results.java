@@ -41,6 +41,28 @@ public class Results extends AppCompatActivity {
         TextView Totalpd = findViewById(R.id.DiseaseScore);
         Totalpd.setText(suma_d);
 
+        // Obtén el TextView para mostrar el mensaje
+        TextView mensajeTextView = findViewById(R.id.Conclusion);
+
+        // Convierte los valores de los umbrales a números enteros
+        int umbralAlto = Integer.parseInt(Upnumero);
+        int umbralBajo = Integer.parseInt(Lnumero);
+        int Totall = Integer.parseInt(suma);
+
+        // Define el mensaje predeterminado
+        String mensaje = "";
+
+        // Verifica las condiciones para determinar el mensaje
+        if (Totall < umbralBajo) {
+            mensaje = "According to the established thresholds, the procedure is OK to perform";
+        } else if (umbralAlto > Totall && Totall > umbralBajo) {
+            mensaje = "According to the established thresholds, the procedure could be justified but there should be reserved OR capacity for Urgent cases.";
+        } else {
+            mensaje = "According to the established thresholds, the procedure is not justified";
+        }
+
+        // Establece el mensaje en el TextView correspondiente
+        mensajeTextView.setText(mensaje);
         findViewById(R.id.buttonMain).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

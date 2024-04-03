@@ -270,6 +270,7 @@
             android:gravity="center"
             android:text="D i s e a s e"
 
+            android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/d1"
@@ -305,6 +306,7 @@
             android:gravity="center"
             android:text="P a t i e n t"
 
+            android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/spinner_d6"
