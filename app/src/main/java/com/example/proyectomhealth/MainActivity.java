@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String[] lista_pr1 = {"<=30 min", "31-60 min", "61-120 min", "121-180 min", "≥181 min"};
+        String[] lista_pr1 = {"≤30 min", "31-60 min", "61-120 min", "121-180 min", "≥181 min"};
         ArrayAdapter<String> adapter_pr1 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lista_pr1);
         adapter_pr1.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
         spinner_pr1.setAdapter(adapter_pr1);
