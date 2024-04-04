@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String[] lista_pr1 = {"<=30 min", "31-60 min", "61-120 min", "121-180 min", ">=181 min"};
+        String[] lista_pr1 = {"<=30 min", "31-60 min", "61-120 min", "121-180 min", "≥181 min"};
         ArrayAdapter<String> adapter_pr1 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lista_pr1);
         adapter_pr1.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
         spinner_pr1.setAdapter(adapter_pr1);
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String[] lista_pr2 = {"Outpatient", "<23 hrs", "24-48 hrs", "<=3d", ">4d"};
+        String[] lista_pr2 = {"Outpatient", "<23 hrs", "24-48 hrs", "2-3d", "≥4d"};
         ArrayAdapter<String> adapter_pr2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lista_pr2);
         adapter_pr2.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
         spinner_pr2.setAdapter(adapter_pr2);
@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String[] lista_pr3 = {"Very Unlikely", "<5%", "5-10%", "11-25%", ">=25%"};
+        String[] lista_pr3 = {"Very Unlikely", "<5%", "5-10%", "11-25%", ">25%"};
         ArrayAdapter<String> adapter_pr3 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lista_pr3);
         adapter_pr3.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
         spinner_pr3.setAdapter(adapter_pr3);
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String[] lista_pr4 = {"<100cc", "101-250cc", "251-500cc", "501-750cc", ">=750cc"};
+        String[] lista_pr4 = {"<100cc", "101-250cc", "251-500cc", "501-750cc", "≥750cc"};
         ArrayAdapter<String> adapter_pr4 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lista_pr4);
         adapter_pr4.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
         spinner_pr4.setAdapter(adapter_pr4);
@@ -172,7 +172,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String[] lista_pr5 = {"1", "2", "3", "4", "5"};
+        String[] lista_pr5 = {"1", "2", "3", "4", ">5"};
         ArrayAdapter<String> adapter_pr5 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lista_pr5);
         adapter_pr5.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
         spinner_pr5.setAdapter(adapter_pr5);
@@ -194,7 +194,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String[] lista_pr6 = {"<=1", "1-5%", "6-10%", "11-25%", ">=25%"};
+        String[] lista_pr6 = {"≤1%", "1-5%", "6-10%", "11-25%", "≥25%"};
         ArrayAdapter<String> adapter_pr6 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lista_pr6);
         adapter_pr6.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
         spinner_pr6.setAdapter(adapter_pr6);
@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String[] lista_pr7 = {"None", " MIS Surgery", "Infraumbilical", " Supraumbilical", "OHNS"};
+        String[] lista_pr7 = {"None of the following", "Abdominopelvic MIS Surgery", "Abdominopelvic Open surgery, Infraumbilical", "Abdominopelvic Open surgery, Supraumbilical", "OHNS/Upper GI/Thoracic"};
         ArrayAdapter<String> adapter_pr7 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lista_pr7);
         adapter_pr7.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
         spinner_pr7.setAdapter(adapter_pr7);
@@ -237,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String[] lista_d1 = {"None", "<40% ", "40-60%", " 60-95%", "available"};
+        String[] lista_d1 = {"None Available", "Available, <40% effective as surgery ", "Available, 40-60% effective as surgery", "Available, 60-95% effective as surgery", "Available equally effective"};
         ArrayAdapter<String> adapter_d1 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lista_d1);
         adapter_d1.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
         spinner_d1.setAdapter(adapter_d1);
@@ -259,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String[] lista_d2 = {"not applicable", "somewhat worse ", "Equivalent", " Somewhat better", "Significantly better"};
+        String[] lista_d2 = {"Significantly worse/ not applicable", "somewhat worse ", "Equivalent", " Somewhat better", "Significantly better"};
         ArrayAdapter<String> adapter_d2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lista_d2);
         adapter_d2.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
         spinner_d2.setAdapter(adapter_d2);
@@ -368,7 +368,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        String[] lista_p1 = {"<20 years", " 21-40 years ", "41-50 years", " 51-65 years", ">65 years"};
+        String[] lista_p1 = {"<20 years old", " 21-40 years old ", "41-50 years old", " 51-65 years old", ">65 years old"};
         ArrayAdapter<String> adapter_p1 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lista_p1);
         adapter_p1.setDropDownViewResource(android.R.layout.select_dialog_singlechoice);
         spinner_p1.setAdapter(adapter_p1);
